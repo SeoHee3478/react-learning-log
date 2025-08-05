@@ -27,5 +27,55 @@ const mapResult1 = arr2.map((item, idx, arr)=>{
 });
 
 console.log(mapResult) // [2,4,6]
+
+let names = arr1.map((item)=>item.name);
+console.log(names) //  ['홍길동', '김남길', '김효빈']
 ```
 
+### 3. sort
+배열을 사전순으로 정렬하는 메서드
+```javascript
+let arr3 = ["b", "a", "c"];
+arr3.sort();
+
+console.log(arr3);
+
+let arr3a = [10, 3, 5];
+arr3a.sort();
+
+console.log(arr3); // [10 3, 5]
+```
+sort 메소드는 숫자의 대소관계로 정렬하는 것이 아닌 사전순으로 정리함
+대소관계로 정렬을 하려면 다음과 같이 작성해야함
+```javascript
+let arr3a = [10, 3, 5];
+arr3a.sort((a,b)=>{
+  if(a > b){
+   // b 가 a 앞에 와라 
+    return 1; -> b,a 배치
+  }else if(a<b){
+    return -1; // a,b 배치
+  }else {
+    // 두 값의 자리를 바꾸지 마라
+    return 0;
+  }
+})
+```
+
+### 4.toSorted (가장 최근에 추가된 최신 함수)
+정렬된 새로운 배열을 반환하는 메서드
+```javascript
+let arr5 = ["c", "a", "b"];
+const sorted = arr5.toSorted();
+
+console.log(arr5); //['c', 'a', 'b']
+console.log(sorted); //['a', 'b', 'c']
+```
+
+### 5. join
+배열의 모든 요소를 하나의 문자열로 합쳐서 반환하는 메서드
+```javascript
+let arr6 = ["hi", "im", "winterlood"];
+const joined = arr6.join(" ");
+console.log(joined);
+```
