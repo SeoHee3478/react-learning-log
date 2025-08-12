@@ -1,4 +1,4 @@
-#  Node.js & 콜백 함수 정리
+#  Node.js 
 
 ## 1. Node.js를 왜 배워야 하나요?
 - **React.js**는 Node.js를 기반으로 동작하는 기술이기 때문
@@ -137,3 +137,5 @@ console.log(mul(3, 5)); // 15
 ```
 
 ⚠ **주의**: ES Module에서는 import 시 반드시 **확장자까지** 적어야 함.
+
+
